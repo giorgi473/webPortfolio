@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import CanvasFractalBackground from "@/components/CanvasFractalBackground";
 import Header from "@/components/shared/Header";
+import ScrollToTop from "@/components/shared/ScrollToTop";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,17 +27,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <figure>
-          <figcaption>
-            <CanvasFractalBackground />
-          </figcaption>
-        </figure>
-        <main className="min-h-screen">{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <figure>
+            <figcaption>
+              <CanvasFractalBackground />
+            </figcaption>
+          </figure>
+          <ScrollToTop />
+          <main className="min-h-screen">{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
