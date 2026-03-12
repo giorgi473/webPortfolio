@@ -10,6 +10,8 @@ import { TerminalDemo } from "@/components/modules/TerminalDemo";
 import Wrapper from "@/components/shared/Wrapper";
 import { PartyPopperIcon } from "@/components/ui/party-popper";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import DottedDivider from "@/components/modules/DottedDivider";
+import ScrollIndicator from "@/components/modules/ScrollIndicator";
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -74,6 +76,10 @@ function PortfolioPage() {
                   </span>
                 </div>
               </div>
+              <div className="-mt-40 mb-24 flex justify-center select-none">
+                 <ScrollIndicator />
+              </div>
+              <DottedDivider />
             </div>
           </section>
           <section className="mt-80">
