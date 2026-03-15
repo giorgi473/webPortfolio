@@ -11,6 +11,7 @@ import { StatsSection } from "@/components/modules/stats-section";
 import SkillsSection from "@/components/modules/SkillsSection";
 import { FeatureGrid } from "@/components/modules/feature-grid";
 import { techLogos } from "@/components/modules/techLogos";
+import ContactSection from "@/components/ContactSection";
 
 function PortfolioPage() {
   return (
@@ -77,6 +78,10 @@ function PortfolioPage() {
           <DottedDivider />
           <section className="my-16">
             <FeatureGrid />
+          </section>
+          <DottedDivider />
+          <section className="my-16">
+            <ContactSection />
           </section>
         </article>
       </div>
