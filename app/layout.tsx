@@ -5,6 +5,7 @@ import CanvasFractalBackground from "@/components/CanvasFractalBackground";
 import Header from "@/components/shared/Header";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import { ThemeProvider } from "@/providers/theme-provider";
+import RightSidePanel from "@/components/shared/RightSidePanel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,6 +45,7 @@ export default function RootLayout({
             </figcaption>
           </figure>
           <ScrollToTop />
+          <RightSidePanel />
           <main className="min-h-screen">{children}</main>
         </ThemeProvider>
       </body>
