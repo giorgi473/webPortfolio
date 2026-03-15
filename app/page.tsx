@@ -3,6 +3,8 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
+  SiNestjs,
+  SiAngular,
 } from "react-icons/si";
 import Hero from "@/components/Hero";
 import LogoLoop from "@/components/LogoLoop";
@@ -12,39 +14,41 @@ import { PartyPopperIcon } from "@/components/ui/party-popper";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import DottedDivider from "@/components/modules/DottedDivider";
 import ScrollIndicator from "@/components/modules/ScrollIndicator";
+import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
+import { RiVuejsFill } from "react-icons/ri";
+import { DiJsBadge } from "react-icons/di";
 
 const techLogos = [
-  { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <DiJsBadge className="text-yellow-500" />, title: "Js", href: "https://developer.mozilla.org/en-US/" },
+  { node: <SiReact className="text-blue-400" />, title: "React", href: "https://react.dev" },
   {
-    node: <SiTypescript />,
+    node: <SiAngular className="text-red-500" />,
+    title: "Angular",
+    href: "https://angular.dev",
+  },
+  {
+    node: <RiVuejsFill className="text-green-800" />,
+    title: "VUE",
+    href: "https://vuejs.org",
+  },
+  { node: <SiNextdotjs className="text-white" />, title: "Next.js", href: "https://nextjs.org" },
+  {
+    node: <SiTypescript className="text-blue-400" />,
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
   },
   {
-    node: <SiTailwindcss />,
+    node: <SiTailwindcss className="text-blue-400" />,
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },
+  {
+    node: <SiNestjs className="text-red-500" />,
+    title: "Tailwind CSS",
+    href: "https://nestjs.com",
+  },
 ];
 
-const imageLogos = [
-  {
-    src: "/logos/company1.png",
-    alt: "Company 1",
-    href: "https://company1.com",
-  },
-  {
-    src: "/logos/company2.png",
-    alt: "Company 2",
-    href: "https://company2.com",
-  },
-  {
-    src: "/logos/company3.png",
-    alt: "Company 3",
-    href: "https://company3.com",
-  },
-];
 function PortfolioPage() {
   return (
     <Wrapper className="mx-auto">
@@ -77,23 +81,26 @@ function PortfolioPage() {
                 </div>
               </div>
               <div className="-mt-40 mb-24 flex justify-center select-none">
-                 <ScrollIndicator />
+                <ScrollIndicator />
               </div>
               <DottedDivider />
             </div>
           </section>
-          <section className="mt-80">
+          <section className="mt-28">
             <LogoLoop
               logos={techLogos}
               speed={100}
               direction="left"
-              logoHeight={60}
+              logoHeight={130}
               gap={60}
               hoverSpeed={0}
               scaleOnHover
               fadeOut
               ariaLabel="Technology partners"
             />
+          </section>
+          <section>
+            <FeaturedProjects />
           </section>
         </article>
       </div>
