@@ -26,7 +26,7 @@ function Header() {
               <Link href={""}>Contact</Link>
             </li>
             <li>
-              <Link href={""}>Resume</Link>
+              <Link href={"/resume"}>Resume</Link>
             </li>
           </ul>
         </nav>

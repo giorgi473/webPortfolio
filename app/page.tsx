@@ -1,11 +1,3 @@
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiNestjs,
-  SiAngular,
-} from "react-icons/si";
 import Hero from "@/components/Hero";
 import LogoLoop from "@/components/LogoLoop";
 import { TerminalDemo } from "@/components/modules/TerminalDemo";
@@ -15,39 +7,10 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import DottedDivider from "@/components/modules/DottedDivider";
 import ScrollIndicator from "@/components/modules/ScrollIndicator";
 import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
-import { RiVuejsFill } from "react-icons/ri";
-import { DiJsBadge } from "react-icons/di";
-
-const techLogos = [
-  { node: <DiJsBadge className="text-yellow-500" />, title: "Js", href: "https://developer.mozilla.org/en-US/" },
-  { node: <SiReact className="text-blue-400" />, title: "React", href: "https://react.dev" },
-  {
-    node: <SiAngular className="text-red-500" />,
-    title: "Angular",
-    href: "https://angular.dev",
-  },
-  {
-    node: <RiVuejsFill className="text-green-800" />,
-    title: "VUE",
-    href: "https://vuejs.org",
-  },
-  { node: <SiNextdotjs className="text-white" />, title: "Next.js", href: "https://nextjs.org" },
-  {
-    node: <SiTypescript className="text-blue-400" />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
-  },
-  {
-    node: <SiTailwindcss className="text-blue-400" />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
-  },
-  {
-    node: <SiNestjs className="text-red-500" />,
-    title: "Tailwind CSS",
-    href: "https://nestjs.com",
-  },
-];
+import { StatsSection } from "@/components/modules/stats-section";
+import SkillsSection from "@/components/modules/SkillsSection";
+import { FeatureGrid } from "@/components/modules/feature-grid";
+import { techLogos } from "@/components/modules/techLogos";
 
 function PortfolioPage() {
   return (
@@ -86,7 +49,11 @@ function PortfolioPage() {
               <DottedDivider />
             </div>
           </section>
-          <section className="mt-28">
+          <section className="my-24">
+            <StatsSection />
+          </section>
+          <DottedDivider />
+          <section className="mt-40 mb-36">
             <LogoLoop
               logos={techLogos}
               speed={100}
@@ -99,8 +66,17 @@ function PortfolioPage() {
               ariaLabel="Technology partners"
             />
           </section>
-          <section>
+          <DottedDivider />
+          <section className="my-28">
             <FeaturedProjects />
+          </section>
+          <DottedDivider />
+          <section className="my-20">
+            <SkillsSection />
+          </section>
+          <DottedDivider />
+          <section className="my-16">
+            <FeatureGrid />
           </section>
         </article>
       </div>

@@ -22,7 +22,7 @@ const lineVariants: Variants = {
 function DottedDivider() {
   return (
     <motion.div
-      className="relative w-full my-12"
+      className="relative w-full"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
