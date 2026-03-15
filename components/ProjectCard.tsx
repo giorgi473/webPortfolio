@@ -5,7 +5,6 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
   CardFooter,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
@@ -33,11 +32,10 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
   return (
     <Card
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-xl border-0 bg-zinc-900 transition-all duration-300 hover:bg-zinc-800/80",
-        className
+        "group relative flex h-full flex-col overflow-hidden rounded-xl border-0 bg-[#0f1115]/50 transition-all duration-300 hover:bg-zinc-800/80",
+        className,
       )}
     >
-      {/* Image */}
       <div className="relative aspect-video overflow-hidden">
         <img
           src={
@@ -49,13 +47,11 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
           className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
           alt={project.title}
         />
-
         {project.badge && (
           <span className="absolute left-3 top-3 rounded bg-cyan-400/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-cyan-400">
             {project.badge}
           </span>
         )}
-
         {isComingSoon && (
           <div className="absolute inset-0 flex items-center justify-center bg-zinc-900/70 backdrop-blur-sm">
             <div className="flex items-center gap-1.5 text-sm text-zinc-400">
@@ -65,8 +61,6 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
           </div>
         )}
       </div>
-
-      {/* Content */}
       <CardHeader className="flex-1 gap-1.5 p-4">
         <CardTitle className="text-base font-semibold text-white">
           {project.title}
@@ -75,8 +69,6 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
           {project.description}
         </CardDescription>
       </CardHeader>
-
-      {/* Links */}
       <CardFooter className="flex gap-2 p-4 pt-0">
         {project.liveUrl && (
           <a
