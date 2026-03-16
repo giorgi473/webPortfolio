@@ -8,10 +8,10 @@ function Hero() {
           {"<"} Hi, my name is {"/>"}
         </p>
         <h1 className="leading-none">
-          <span className="block text-[43px] sm:text-[52px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
+          <span className="block text-[50px] sm:text-[52px] font-extrabold text-sky-300 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
             GIORGI
           </span>
-          <span className="block text-[43px] sm:text-[52px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
+          <span className="block text-[50px] sm:text-[52px] font-extrabold text-sky-300 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
             KAVTARADZE
           </span>
         </h1>
