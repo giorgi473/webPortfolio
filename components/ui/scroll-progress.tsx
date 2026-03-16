@@ -1,22 +1,19 @@
 "use client";
 
-import { motion, useScroll, type MotionProps } from "motion/react";
-
+import { motion, useScroll } from "motion/react";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-interface ScrollProgressProps extends Omit<
-  React.HTMLAttributes<HTMLElement>,
-  keyof MotionProps
-> {
+interface ScrollProgressProps {
+  className?: string;
   ref?: React.Ref<HTMLDivElement>;
 }
 
-export function ScrollProgress({
-  className,
-  ref,
-  ...props
-}: ScrollProgressProps) {
+export function ScrollProgress({ className, ref }: ScrollProgressProps) {
   const { scrollYProgress } = useScroll();
+  const pathname = usePathname();
+
+  if (pathname === "/resume") return null;
 
   return (
     <motion.div
@@ -28,7 +25,6 @@ export function ScrollProgress({
       style={{
         scaleX: scrollYProgress,
       }}
-      {...props}
     />
   );
 }
