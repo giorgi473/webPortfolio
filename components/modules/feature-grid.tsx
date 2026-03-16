@@ -59,7 +59,7 @@ const features = [
 export function FeatureGrid() {
   return (
     <section className="py-20 bg-transparent">
-      <div className="flex flex-col items-center text-center space-y-4 mb-16">
+      <div className="flex flex-col items-center text-center space-y-4 mb-16 px-6 sm:px-5">
         <code className="text-zinc-400 font-mono text-lg tracking-wider">
           {"> Why work with me?"}
         </code>
@@ -73,7 +73,7 @@ export function FeatureGrid() {
           Here's what makes me a great addition to your team
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 sm:px-5">
         {features.map((feature, index) => (
           <Card
             key={index}

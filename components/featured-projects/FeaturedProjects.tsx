@@ -63,8 +63,8 @@ const projects: Project[] = [
 
 export default function FeaturedProjects() {
   return (
-    <section className="w-full py-12 sm:py-16 px-4 sm:px-6 lg:px-0">
-      <div className="max-w-3xl mx-auto text-center space-y-3">
+    <section className="w-full py-12 sm:py-16">
+      <div className="max-w-3xl mx-auto text-center space-y-3 px-6 sm:px-5">
         <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
           <span className="text-cyan-400">{">"}</span> My recent projects
         </p>
@@ -75,7 +75,7 @@ export default function FeaturedProjects() {
           A showcase of my recent projects and contributions
         </p>
       </div>
-      <div className="mt-10 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
+      <div className="mt-10 grid gap-6 px-6 sm:px-5 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

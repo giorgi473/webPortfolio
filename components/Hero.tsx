@@ -2,16 +2,16 @@ import { Button } from "@/components/ui/button";
 
 function Hero() {
   return (
-    <section className="mt-7">
+    <section className="mt-7 px-6 sm:px-5">
       <div className="relative z-10 flex min-h-screen flex-col justify-evenly">
         <p className="text-sm font-mono text-sky-300">
           {"<"} Hi, my name is {"/>"}
         </p>
         <h1 className="leading-none">
-          <span className="block text-[72px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
+          <span className="block text-[43px] sm:text-[52px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
             GIORGI
           </span>
-          <span className="block text-[72px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
+          <span className="block text-[43px] sm:text-[52px] font-extrabold text-sky-300 md:text-[96px] lg:text-[112px]">
             KAVTARADZE
           </span>
         </h1>

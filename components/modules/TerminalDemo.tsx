@@ -6,7 +6,7 @@ import {
 
 export function TerminalDemo() {
   return (
-    <div className="flex items-center justify-center mb-10">
+    <div className="flex items-center justify-center mb-10 px-6 sm:px-5">
       <Terminal>
         <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
 

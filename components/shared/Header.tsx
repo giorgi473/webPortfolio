@@ -146,7 +146,7 @@ function Header() {
   return (
     <header className="bg-black/90 fixed top-0 w-full z-50 py-4 md:py-6 backdrop-blur-md">
       <ScrollProgress />
-      <Wrapper className="mx-auto px-4 sm:px-0">
+      <Wrapper className="mx-auto px-5 sm:px-4 inset-0">
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <div
@@ -227,14 +227,14 @@ function Header() {
                       type="button"
                       onClick={() => handleNavClick(item)}
                       className={[
-                        "w-full text-left py-3 px-4 rounded-xl text-base transition-all duration-200 flex items-center gap-3",
+                        "w-full text-left py-3 px-4 rounded-md text-lg transition-all duration-200 flex items-center gap-3",
                         isActive
-                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-cyan-400 border-r-4 border-cyan-400 shadow-lg"
+                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-cyan-400 border-b-2 border-cyan-400 shadow-lg"
                           : "hover:bg-white/10 hover:text-white hover:translate-x-1",
                       ].join(" ")}
                     >
                       <div
-                        className={`w-2 h-2 rounded-full transition-all ${isActive ? "bg-cyan-400 scale-125" : "bg-zinc-500"}`}
+                        className={`w-3 h-3 rounded-full transition-all ${isActive ? "bg-cyan-400 scale-125" : "bg-zinc-400/30 ring-2 ring-cyan-400"}`}
                       />
                       {item.label}
                     </button>
