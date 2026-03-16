@@ -40,13 +40,12 @@ const ContactSection = () => {
       description: "Thank you for reaching out. I'll get back to you soon.",
       position: "bottom-right",
     });
-    console.log(data);
     form.reset();
   }
 
   return (
-    <section className="py-16 px-4 md:px-8 text-white max-w-7xl mx-auto">
-      <div className="text-center mb-16">
+    <section className="py-16 text-white max-w-7xl mx-auto">
+      <div className="text-center mb-16 px-6 sm:px-5">
         <p className="text-zinc-400 font-mono text-lg mb-2">
           {"> Let's connect"}
         </p>
@@ -57,9 +56,9 @@ const ContactSection = () => {
           Have a project in mind? Want to collaborate? Or just say hello?
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-6 sm:px-5">
         <div>
-          <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
+          <h3 className="text-2xl font-semibold mb-6 text-cyan-400 text-center">
             Send a Message
           </h3>
           <form id="contact-form" onSubmit={form.handleSubmit(onSubmit)}>

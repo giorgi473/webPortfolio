@@ -36,7 +36,20 @@ export function StatsSection() {
   return (
     <>
       <div className="w-full select-none">
-        <div className="px-6 lg:px-0 py-20">
+        <div className="text-center space-y-3 flex flex-col items-center mb-10 px-6 sm:px-5">
+          <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
+            <span className="text-cyan-400">{">"}</span> Technologies I work
+            with
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
+            <span className="text-cyan-400">Stats & Tools</span>
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize text-center max-w-lg">
+            A collection of technologies and tools I use to build modern web
+            applications
+          </p>
+        </div>
+        <div className="px-6 sm:px-5 py-20">
           <div className="flex flex-wrap justify-center lg:justify-start items-stretch gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="flex-1">

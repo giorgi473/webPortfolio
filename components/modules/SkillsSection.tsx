@@ -49,7 +49,7 @@ const statsData = [
 export default function SkillsSection() {
   return (
     <div className="py-20 text-center">
-      <div className="text-center space-y-3 flex flex-col items-center mb-10">
+      <div className="text-center space-y-3 flex flex-col items-center mb-10 px-6 sm:px-5">
         <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
           <span className="text-cyan-400">{">"}</span> Technologies I work with
         </p>
@@ -61,7 +61,7 @@ export default function SkillsSection() {
           applications
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 select-none my-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 select-none my-10 px-6 sm:px-5">
         {skills.map((skill, index) => (
           <Card
             key={index}

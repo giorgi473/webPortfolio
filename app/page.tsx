@@ -21,7 +21,7 @@ function PortfolioPage() {
           <section id="home" className="scroll-mt-28">
             <Hero />
             <TerminalDemo />
-            <div className="space-y-20">
+            <div className="space-y-20 px-6 sm:px-5">
               <ShimmerButton className="shadow-2xl">
                 <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
                   Available for projects
