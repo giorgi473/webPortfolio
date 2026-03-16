@@ -1,5 +1,11 @@
+import ResumePageView from "@/features/resume/view/resumepage-view";
+
 function ResumePage() {
-  return <div className="min-h-[2000px]">ResumePage</div>;
+  return (
+    <article>
+      <ResumePageView />
+    </article>
+  );
 }
 
 export default ResumePage;
