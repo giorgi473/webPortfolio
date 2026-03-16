@@ -24,7 +24,7 @@ export const ShimmerButton = React.forwardRef<
       shimmerColor = "#ffffff",
       shimmerSize = "0.05em",
       shimmerDuration = "3s",
-      borderRadius = "100px",
+      borderRadius = "10px",
       background = "#2294f7",
       className,
       children,
@@ -34,6 +34,7 @@ export const ShimmerButton = React.forwardRef<
   ) => {
     return (
       <button
+        suppressHydrationWarning
         style={
           {
             "--spread": "90deg",
@@ -45,7 +46,7 @@ export const ShimmerButton = React.forwardRef<
           } as CSSProperties
         }
         className={cn(
-          "group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-sky-700 px-6 py-3 whitespace-nowrap text-white [background:var(--bg)]",
+          "group relative z-0 flex items-center justify-center overflow-hidden rounded-sm border border-sky-700 px-6 py-3 whitespace-nowrap text-white [background:var(--bg)]",
           "transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px",
           className,
         )}
@@ -72,7 +73,7 @@ export const ShimmerButton = React.forwardRef<
           className={cn(
             "absolute inset-0 size-full",
 
-            "rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]",
+            "rounded-sm px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]",
 
             // transition
             "transform-gpu transition-all duration-300 ease-in-out",
@@ -88,7 +89,7 @@ export const ShimmerButton = React.forwardRef<
         {/* backdrop */}
         <div
           className={cn(
-            "absolute inset-(--cut) -z-20 rounded-lg [background:var(--bg)]",
+            "absolute inset-(--cut) -z-20 rounded-sm [background:var(--bg)]",
           )}
         />
       </button>

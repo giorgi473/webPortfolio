@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Wrapper from "@/components/shared/Wrapper";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Logo from "@/components/Logo";
-import { Menu, X } from "lucide-react"; // ან შეგიძლია react-icons
+import { Menu, X } from "lucide-react";
 
 const SCROLL_TARGET_KEY = "scroll-target-section";
 
@@ -203,6 +203,7 @@ function Header() {
 
           {/* Mobile menu button */}
           <button
+            suppressHydrationWarning
             className="md:hidden p-2 -mr-1 rounded-lg hover:bg-white/10 transition-all duration-200 flex items-center justify-center w-10 h-10"
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "დახურვა" : "მენიუ"}

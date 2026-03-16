@@ -21,33 +21,38 @@ function PortfolioPage() {
           <section id="home" className="scroll-mt-28">
             <Hero />
             <TerminalDemo />
-            <div className="space-y-20 px-6 sm:px-5">
-              <ShimmerButton className="shadow-2xl">
-                <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
-                  Available for projects
-                </span>
-              </ShimmerButton>
-              <div>
-                <div className="flex items-center gap-1 text-xl text-zinc-400 transition-all duration-200 ease-in-out">
-                  <span>
-                    <PartyPopperIcon />
-                  </span>
-                  <span className="hover:bg-sky-500/20 px-3 py-0.5">React</span>
-                  <span className="hover:bg-sky-500/20 px-3 py-0.5">
-                    Next.js
-                  </span>
-                  <span className="hover:bg-sky-500/20 px-3 py-0.5">
-                    TypeScript
-                  </span>
-                  <span className="hover:bg-sky-500/20 px-3 py-0.5">
-                    Team Collaboration
-                  </span>
-                </div>
-              </div>
-              <div className="-mt-40 mb-24 flex justify-center select-none">
+            <div className="px-6 sm:px-5">
+              <div className="flex justify-center select-none cursor-pointer pb-8 lg:pb-0">
                 <ScrollIndicator />
               </div>
-              <DottedDivider />
+              <div className="space-y-14">
+                <ShimmerButton className="shadow-2xl">
+                  <span className="text-center text-sm leading-none font-medium tracking-tight whitespace-pre-wrap text-white lg:text-lg dark:from-white dark:to-slate-900/10">
+                    Available for projects
+                  </span>
+                </ShimmerButton>
+                <div>
+                  <div className="flex flex-wrap items-center text-xl space-y-4 text-zinc-400 transition-all duration-200 ease-in-out">
+                    <span>
+                      <PartyPopperIcon />
+                    </span>
+                    <span className="hover:bg-sky-500/20 px-3 ml-3 py-0.5">
+                      React
+                    </span>
+                    <span className="hover:bg-sky-500/20 px-3 py-0.5">
+                      Next.js
+                    </span>
+                    <span className="hover:bg-sky-500/20 px-3 mr-3 py-0.5">
+                      TypeScript
+                    </span>
+                    <span className="hover:bg-sky-500/20">
+                      Team Collaboration
+                    </span>
+                    <span className="hidden">s</span>
+                  </div>
+                </div>
+                <DottedDivider />
+              </div>
             </div>
           </section>
           <section id="stats" className="my-24">
