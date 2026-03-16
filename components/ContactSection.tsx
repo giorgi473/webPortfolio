@@ -5,7 +5,6 @@ import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
 import { Send } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   Field,
@@ -59,10 +58,12 @@ const ContactSection = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div className="space-y-6">
-          <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
+        <div>
+          <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
+            Send a Message
+          </h3>
           <form id="contact-form" onSubmit={form.handleSubmit(onSubmit)}>
-            <FieldGroup className="space-y-5">
+            <FieldGroup className="space-y-1">
               <Controller
                 name="name"
                 control={form.control}
@@ -72,7 +73,7 @@ const ContactSection = () => {
                     <Input
                       {...field}
                       placeholder="Your name"
-                      className="bg-white/5 border-white/10 rounded-xl p-6 focus:ring-cyan-500/50"
+                      className="bg-slate-950/50 border-white/10 rounded-sm p-6 focus:ring-cyan-500/50"
                       aria-invalid={fieldState.invalid}
                     />
                     {fieldState.invalid && (
@@ -93,7 +94,7 @@ const ContactSection = () => {
                       {...field}
                       type="email"
                       placeholder="your.email@example.com"
-                      className="bg-white/5 border-white/10 rounded-xl p-6 focus:ring-cyan-500/50"
+                      className="bg-slate-950/50 border-white/10 rounded-sm p-6 focus:ring-cyan-500/50"
                       aria-invalid={fieldState.invalid}
                     />
                     {fieldState.invalid && (
@@ -115,7 +116,7 @@ const ContactSection = () => {
                         {...field}
                         placeholder="Tell me about your project..."
                         rows={5}
-                        className="bg-white/5 border-white/10 rounded-xl p-4 resize-none min-h-32 focus:ring-cyan-500/50"
+                        className="bg-slate-950/50 border-white/10 rounded-sm p-4 resize-none min-h-32 focus:ring-cyan-500/50"
                         aria-invalid={fieldState.invalid}
                       />
                     </InputGroup>
@@ -127,7 +128,7 @@ const ContactSection = () => {
               />
               <Button
                 type="submit"
-                className="w-full h-14 bg-linear-to-r from-cyan-500 to-blue-600 hover:opacity-90 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all active:scale-[0.98] shadow-lg shadow-cyan-500/20"
+                className="w-full h-14  bg-cyan-400 cursor-pointer text-white font-bold rounded-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
               >
                 Send Message <Send size={18} />
               </Button>

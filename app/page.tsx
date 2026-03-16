@@ -18,7 +18,7 @@ function PortfolioPage() {
     <Wrapper className="mx-auto">
       <div className="text-white">
         <article>
-          <section>
+          <section id="home" className="scroll-mt-28">
             <Hero />
             <TerminalDemo />
             <div className="space-y-20">
@@ -50,7 +50,7 @@ function PortfolioPage() {
               <DottedDivider />
             </div>
           </section>
-          <section className="my-24">
+          <section id="stats" className="my-24">
             <StatsSection />
           </section>
           <DottedDivider />
@@ -68,11 +68,11 @@ function PortfolioPage() {
             />
           </section>
           <DottedDivider />
-          <section className="my-28">
+          <section id="work" className="my-28 scroll-mt-28">
             <FeaturedProjects />
           </section>
           <DottedDivider />
-          <section className="my-20">
+          <section id="skills" className="my-20 scroll-mt-28">
             <SkillsSection />
           </section>
           <DottedDivider />
@@ -80,7 +80,7 @@ function PortfolioPage() {
             <FeatureGrid />
           </section>
           <DottedDivider />
-          <section className="my-16">
+          <section id="contact" className="my-16 scroll-mt-28">
             <ContactSection />
           </section>
         </article>
