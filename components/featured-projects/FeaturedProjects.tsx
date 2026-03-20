@@ -1,9 +1,8 @@
-import ProjectCard, { type Project } from "../ProjectCard";
+import ProjectCard, { type Project } from "@/components/featured-projects/ProjectCard";
 
 const projects: Project[] = [
   {
     id: 1,
-    status: "coming-soon",
     title: "Large-Scale Project",
     description:
       "Working on a large-scale project with a team for 1 year. Currently in active development.",
@@ -11,7 +10,6 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    status: "live",
     title: "RedSeam Clothing",
     description:
       "Modern e‑commerce experience for clothing with smooth browsing and checkout.",
@@ -21,7 +19,6 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    status: "live",
     title: "Yc-directory",
     description:
       "Discover and explore startups, connect with founders, and browse YC batches. Discover and explore startups, connect with founders, and browse YC batches.ewewe",
@@ -31,7 +28,6 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    status: "live",
     title: "Yc-directoryewe",
     description:
       "Discover and explore startups, connect with founders, and browse YC batches.ewewe Discover and explore startups, connect with founders, and browse YC batches.ewewe",
@@ -41,7 +37,6 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    status: "live",
     title: "Yc-directoryewe",
     description:
       "Discover and explore startups, connect with founders, and browse YC batches.ewewe Discover and explore startups, connect with founders, and browse YC batches.ewewe",
@@ -51,7 +46,6 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    status: "live",
     title: "Yc-directoryewe",
     description:
       "Discover and explore startups, connect with founders, and browse YC batches.ewewe Discover and explore startups, connect with founders, and browse YC batches.ewewe",
