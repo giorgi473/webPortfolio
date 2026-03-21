@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import CanvasFractalBackground from "@/components/CanvasFractalBackground";
 import Header from "@/components/shared/Header";
 import ScrollToTop from "@/components/shared/ScrollToTop";
-import { ThemeProvider } from "@/providers/theme-provider";
 import RightSidePanel from "@/components/shared/RightSidePanel";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,20 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0d0218]`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           <Header />
-          <figure>
-            <figcaption>
-              <CanvasFractalBackground />
-            </figcaption>
-          </figure>
           <ScrollToTop />
           <RightSidePanel />
           <main className="min-h-screen">{children}</main>

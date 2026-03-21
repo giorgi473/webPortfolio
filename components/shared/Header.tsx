@@ -144,7 +144,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-black/90 fixed top-0 w-full z-50 py-4 md:py-6 backdrop-blur-md">
+    <header className="bg-[#0b0115] border-b border-b-[#471f6d] fixed top-0 w-full z-50 py-4 md:py-6 backdrop-blur-md">
       <ScrollProgress />
       <Wrapper className="mx-auto px-5 sm:px-4 inset-0">
         <nav className="flex items-center justify-between">
