@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#020618",
+        background: "rgba(107, 29, 208, 0.2)",
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #020618" }}
@@ -37,9 +37,9 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-purple-400 text-[24px] font-bold">{experience.title}</h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-zinc-400 text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -67,7 +67,7 @@ const Experience = () => {
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center text-purple-400`}>
           Work Experience.
         </h2>
       </div>

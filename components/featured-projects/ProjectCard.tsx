@@ -23,7 +23,7 @@ type ProjectCardProps = {
 };
 
 const statusConfig = {
-  active: { label: "Active project", color: "bg-emerald-500" },
+  active: { label: "Active project", color: "bg-purple-400" },
   "in-progress": { label: "In progress", color: "bg-amber-400" },
   archived: { label: "Archived", color: "bg-zinc-400" },
 };
@@ -53,8 +53,8 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
         />
 
         {project.badge && (
-          <span className="absolute left-3 top-3 flex items-center gap-1 rounded-sm px-2.5 py-1 text-[11px] font-medium text-zinc-200 bg-cyan-400/40">
-            <Sparkles className="size-3 text-cyan-400" />
+          <span className="absolute left-3 top-3 flex items-center gap-1 rounded-sm px-2.5 py-1 text-[11px] font-medium text-zinc-200 bg-purple-400/40">
+            <Sparkles className="size-3 text-purple-400" />
             {project.badge}
           </span>
         )}
@@ -76,7 +76,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
             href={project.liveUrl || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-sm bg-cyan-400 px-3.5 py-2 text-xs font-medium text-zinc-200 transition-opacity hover:text-white"
+            className="inline-flex items-center gap-1.5 rounded-sm bg-purple-400 px-3.5 py-2 text-xs font-medium text-zinc-200 transition-opacity hover:text-white"
           >
             <ArrowUpRight className="size-3.5" />
             Live demo

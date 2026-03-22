@@ -108,7 +108,7 @@ function Connect() {
     <>
       <Card className="border border-slate-800 bg-zinc-950 rounded-md">
         <CardHeader className="px-7">
-          <CardTitle className="text-2xl font-bold text-cyan-400">
+          <CardTitle className="text-2xl font-bold text-purple-400">
             Contact
           </CardTitle>
         </CardHeader>

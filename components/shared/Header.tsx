@@ -170,8 +170,8 @@ function Header() {
                       className={[
                         "inline-block px-2 pb-0.5 border-b-3 transition-colors cursor-pointer text-sm lg:text-base",
                         isActive
-                          ? "text-cyan-400 border-cyan-400"
-                          : "border-transparent hover:border-cyan-400 hover:text-white",
+                          ? "text-purple-400 border-purple-400"
+                          : "border-transparent hover:border-purple-400 hover:text-white",
                       ].join(" ")}
                       aria-current={isActive ? "page" : undefined}
                     >
@@ -189,8 +189,8 @@ function Header() {
                     className={[
                       "inline-block px-2 pb-0.5 border-b-3 transition-colors cursor-pointer text-sm lg:text-base",
                       isActive
-                        ? "text-cyan-400 border-cyan-400"
-                        : "border-transparent hover:border-cyan-400 hover:text-white",
+                        ? "text-purple-400 border-purple-400"
+                        : "border-transparent hover:border-purple-400 hover:text-white",
                     ].join(" ")}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -230,12 +230,12 @@ function Header() {
                       className={[
                         "w-full text-left py-3 px-4 rounded-md text-lg transition-all duration-200 flex items-center gap-3",
                         isActive
-                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-cyan-400 border-b-2 border-cyan-400 shadow-lg"
+                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-purple-400 border-b-2 border-purple-400 shadow-lg"
                           : "hover:bg-white/10 hover:text-white hover:translate-x-1",
                       ].join(" ")}
                     >
                       <div
-                        className={`w-3 h-3 rounded-full transition-all ${isActive ? "bg-cyan-400 scale-125" : "bg-zinc-400/30 ring-2 ring-cyan-400"}`}
+                        className={`w-3 h-3 rounded-full transition-all ${isActive ? "bg-purple-500 scale-125" : "bg-zinc-400/30 ring-2 ring-purple-500"}`}
                       />
                       {item.label}
                     </button>

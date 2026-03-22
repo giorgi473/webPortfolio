@@ -10,43 +10,43 @@ export function TerminalDemo() {
       <Terminal>
         <TypingAnimation>&gt; pnpm dlx shadcn@latest init</TypingAnimation>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Preflight checks.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Verifying framework. Found Next.js.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Validating Tailwind CSS.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Validating import alias.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Writing components.json.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Checking registry.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Updating tailwind.config.ts
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Updating app/globals.css
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           ✔ Installing dependencies.
         </AnimatedSpan>
 
-        <AnimatedSpan className="text-sky-500">
+        <AnimatedSpan className="text-purple-400">
           <span>ℹ Updated 1 file:</span>
           <span className="pl-2">- lib/utils.ts</span>
         </AnimatedSpan>

@@ -1,7 +1,7 @@
 function Logo() {
   return (
-    <span className="p-2.5 bg-sky-500 rounded-sm select-none cursor-pointer font-extrabold">
-      GI
+    <span className="p-2 bg-purple-400 rounded-sm select-none cursor-pointer font-extrabold">
+      GK
     </span>
   );
 }

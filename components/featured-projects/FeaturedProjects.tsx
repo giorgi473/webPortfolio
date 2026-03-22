@@ -60,10 +60,10 @@ export default function FeaturedProjects() {
     <section className="w-full py-12 sm:py-16">
       <div className="max-w-3xl mx-auto text-center space-y-3 px-6 sm:px-5">
         <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
-          <span className="text-cyan-400">{">"}</span> My recent projects
+          <span className="text-purple-400">{">"}</span> My recent projects
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
-          <span className="text-cyan-400">Featured Work</span>
+          <span className="text-purple-400">Featured Work</span>
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize">
           A showcase of my recent projects and contributions

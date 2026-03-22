@@ -51,10 +51,10 @@ export default function SkillsSection() {
     <div className="py-20 text-center">
       <div className="text-center space-y-3 flex flex-col items-center mb-10 px-6 sm:px-5">
         <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
-          <span className="text-cyan-400">{">"}</span> Technologies I work with
+          <span className="text-purple-400">{">"}</span> Technologies I work with
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
-          <span className="text-cyan-400">Skills & Tools</span>
+          <span className="text-purple-400">Skills & Tools</span>
         </h2>
         <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize text-center max-w-lg">
           A collection of technologies and tools I use to build modern web
@@ -65,7 +65,7 @@ export default function SkillsSection() {
         {skills.map((skill, index) => (
           <Card
             key={index}
-            className="bg-[#0f1115]/50 border-gray-800 rounded-lg hover:border-gray-600 transition-colors group"
+            className="bg-[#ba4ef410] border-gray-800 rounded-lg hover:border-gray-600 transition-colors group"
           >
             <CardContent className="flex flex-col items-center justify-center p-8">
               <div className="mb-4 text-gray-300 group-hover:text-white transition-colors bg-gray-400/10 p-4 rounded-md">

@@ -14,26 +14,26 @@ export default function ResumeHero() {
       <div className="w-full max-w-5xl space-y-20">
         <div className="mb-6 text-sm text-slate-400 text-center">
           <p className="text-zinc-400 font-mono text-lg mb-2 flex items-center justify-center gap-3 capitalize">
-            <span className="text-cyan-400">{">"}</span>
+            <span className="text-purple-400">{">"}</span>
             {"resume"}
           </p>
         </div>
         <header className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[0.15em] text-cyan-300 uppercase">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[0.15em] text-purple-400 uppercase">
             GIORGI KAVTARADZE
           </h1>
-          <p className="mt-4 text-lg sm:text-2xl font-bold text-cyan-300">
+          <p className="mt-4 text-lg sm:text-2xl font-bold text-purple-400">
             Developer (Next.js &amp; API Integration)
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 select-none">
             <span className="flex items-center gap-1">
-              <span className="text-cyan-400">
+              <span className="text-purple-400">
                 <FcElectricity size={"18"} />
               </span>
               Tbilisi
             </span>
             <span className="flex items-center gap-1">
-              <span className="text-cyan-400">
+              <span className="text-purple-400">
                 <FaPhoneSquareAlt size={18} />
               </span>
               +995 599 71 57 01
@@ -43,7 +43,7 @@ export default function ResumeHero() {
               target="_blank"
               className="flex items-center gap-1 hover:text-cyan-300 transition-colors"
             >
-              <span className="text-cyan-400">
+              <span className="text-purple-400">
                 <IoIosMailUnread size={21} />
               </span>
               giorgi.kavtaradze2000@mail.ru
@@ -52,7 +52,7 @@ export default function ResumeHero() {
         </header>
         <Card className="border bg-zinc-950 rounded-md">
           <CardHeader className="px-7">
-            <CardTitle className="text-2xl font-bold text-cyan-400">
+            <CardTitle className="text-2xl font-bold text-purple-400">
               About
             </CardTitle>
           </CardHeader>
