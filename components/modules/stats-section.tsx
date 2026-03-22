@@ -53,7 +53,7 @@ export function StatsSection() {
           <div className="flex flex-wrap justify-center lg:justify-start items-stretch gap-6 lg:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="flex-1">
-                <Card className="group bg-[#0f1115]/50 border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 h-full p-8 rounded-lg flex flex-col items-center justify-center">
+                <Card className="group bg-transparent border border-white/10 hover:bg-white/10 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 h-full p-8 rounded-lg flex flex-col items-center justify-center">
                   <CardContent className="flex flex-col items-center p-0 text-center flex-1 justify-center">
                     <div className="mb-6 lg:mb-8 group-hover:scale-110 transition-all duration-500">
                       <stat.icon

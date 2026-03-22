@@ -12,7 +12,6 @@ import SkillsSection from "@/components/modules/SkillsSection";
 import { FeatureGrid } from "@/components/modules/feature-grid";
 import { techLogos } from "@/components/modules/techLogos";
 import ContactSection from "@/components/ContactSection";
-import Experience from "@/components/Experience";
 import StarsCanvas from "@/components/canvas/StarsCanvas";
 
 function PortfolioPage() {
@@ -79,7 +78,6 @@ function PortfolioPage() {
             </section>
             <DottedDivider />
             <section id="work" className="my-28 scroll-mt-28">
-              <Experience />
               <FeaturedProjects />
             </section>
             <DottedDivider />
@@ -91,13 +89,13 @@ function PortfolioPage() {
               <FeatureGrid />
             </section>
             <DottedDivider />
-            <section id="contact" className="my-16 scroll-mt-28 relative z-0">
-              <ContactSection />
-              <StarsCanvas />
-            </section>
           </article>
         </div>
       </Wrapper>
+      <section id="contact" className="mt-18 scroll-mt-28 relative z-0">
+        <ContactSection />
+        <StarsCanvas />
+      </section>
     </>
   );
 }

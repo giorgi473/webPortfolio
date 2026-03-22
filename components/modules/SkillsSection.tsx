@@ -33,17 +33,17 @@ const statsData = [
   {
     value: "12+",
     label: "Technologies",
-    gradientClass: "text-sky-400",
+    gradientClass: "text-purple-900",
   },
   {
     value: "Full Stack",
     label: "Development",
-    gradientClass: "text-blue-400",
+    gradientClass: "text-purple-900",
   },
   {
     value: "Modern",
     label: "Tech Stack",
-    gradientClass: "text-emerald-400",
+    gradientClass: "text-purple-900",
   },
 ];
 export default function SkillsSection() {
@@ -65,7 +65,7 @@ export default function SkillsSection() {
         {skills.map((skill, index) => (
           <Card
             key={index}
-            className="bg-[#ba4ef410] border-gray-800 rounded-lg hover:border-gray-600 transition-colors group"
+            className="bg-transparent border-gray-800 rounded-lg hover:border-gray-600 transition-colors group"
           >
             <CardContent className="flex flex-col items-center justify-center p-8">
               <div className="mb-4 text-gray-300 group-hover:text-white transition-colors bg-gray-400/10 p-4 rounded-md">

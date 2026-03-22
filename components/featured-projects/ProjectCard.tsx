@@ -35,7 +35,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
   return (
     <Card
       className={cn(
-        "group flex flex-col overflow-hidden p-0 rounded-sm select-none bg-zinc-950 transition-all duration-200 hover:-translate-y-0.5",
+        "group flex flex-col overflow-hidden p-0 rounded-sm select-none bg-transparent transition-all duration-200 hover:-translate-y-0.5",
         className,
       )}
     >
