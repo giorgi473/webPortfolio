@@ -69,7 +69,7 @@ export default function RightSidePanel() {
                     className="group relative block cursor-pointer"
                     aria-label={button.label}
                   >
-                    <div className="relative w-14 h-14 bg-linear-to-br from-purple-400 to-purple-400 hover:from-purple-400 hover:to-purple-400 transition-all duration-200 flex items-center justify-center">
+                    <div className="relative w-14 h-14 bg-linear-to-br from-purple-900 to-purple-900 hover:from-purple-900 hover:to-purple-900 transition-all duration-200 flex items-center justify-center">
                       <div className="text-black group-hover:scale-110 transition-transform duration-200">
                         {button.icon}
                       </div>

@@ -25,10 +25,10 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
     ? {
-        r: Number.parseInt(result[1], 16),
-        g: Number.parseInt(result[2], 16),
-        b: Number.parseInt(result[3], 16),
-      }
+      r: Number.parseInt(result[1], 16),
+      g: Number.parseInt(result[2], 16),
+      b: Number.parseInt(result[3], 16),
+    }
     : { r: 0, g: 0, b: 0 };
 }
 
@@ -232,7 +232,7 @@ export function DotPattern({
   return (
     <div
       ref={containerRef}
-      className={cn("fixed inset-0 overflow-hidden bg-black", className)}
+      className={cn("fixed inset-0 overflow-hidden bg-[#010318ad]", className)}
     >
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />
       <div

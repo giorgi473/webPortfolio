@@ -144,7 +144,7 @@ function Header() {
   };
 
   return (
-    <header className="bg-[#0b0115] border-b border-b-[#471f6d] fixed top-0 w-full z-50 py-4 md:py-6 backdrop-blur-md">
+    <header className="bg-transparent border-b border-b-[#471f6d] fixed top-0 w-full z-50 py-4 md:py-6 backdrop-blur-md">
       <ScrollProgress />
       <Wrapper className="mx-auto px-5 sm:px-4 inset-0">
         <nav className="flex items-center justify-between">
@@ -170,8 +170,8 @@ function Header() {
                       className={[
                         "inline-block px-2 pb-0.5 border-b-3 transition-colors cursor-pointer text-sm lg:text-base",
                         isActive
-                          ? "text-purple-400 border-purple-400"
-                          : "border-transparent hover:border-purple-400 hover:text-white",
+                          ? "text-purple-900 border-purple-900"
+                          : "border-transparent hover:border-purple-900 hover:text-white",
                       ].join(" ")}
                       aria-current={isActive ? "page" : undefined}
                     >
@@ -189,8 +189,8 @@ function Header() {
                     className={[
                       "inline-block px-2 pb-0.5 border-b-3 transition-colors cursor-pointer text-sm lg:text-base",
                       isActive
-                        ? "text-purple-400 border-purple-400"
-                        : "border-transparent hover:border-purple-400 hover:text-white",
+                        ? "text-purple-900 border-purple-900"
+                        : "border-transparent hover:border-purple-900 hover:text-white",
                     ].join(" ")}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -230,7 +230,7 @@ function Header() {
                       className={[
                         "w-full text-left py-3 px-4 rounded-md text-lg transition-all duration-200 flex items-center gap-3",
                         isActive
-                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-purple-400 border-b-2 border-purple-400 shadow-lg"
+                          ? "bg-linear-to-r from-cyan-400/20 to-cyan-500/20 text-purple-900 border-b-2 border-purple-900 shadow-lg"
                           : "hover:bg-white/10 hover:text-white hover:translate-x-1",
                       ].join(" ")}
                     >
