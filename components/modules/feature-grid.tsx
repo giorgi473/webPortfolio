@@ -52,7 +52,7 @@ const features = [
     description:
       "Focused on delivering value and achieving your business goals through technology.",
     icon: <Target className="w-5 h-5 text-white" />,
-    iconBg: "bg-cyan-500",
+    iconBg: "bg-purple-400",
   },
 ];
 
@@ -65,7 +65,7 @@ export function FeatureGrid() {
         </code>
         <h2 className="text-4xl md:text-8xl font-bold tracking-tight text-white">
           Let's Build{" "}
-          <span className="bg-linear-to-r from-cyan-400 via-blue-500 to-emerald-400 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-purple-400 via-purple-500 to-purple-400 bg-clip-text text-transparent">
             Something Amazing
           </span>
         </h2>
@@ -100,7 +100,7 @@ export function FeatureGrid() {
       <div className="mt-20 flex justify-center">
         <Button
           size="lg"
-          className="rounded-full px-8 py-6 text-md font-semibold bg-linear-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all hover:shadow-[0_0_30px_rgba(56,189,248,0.5)] active:scale-95"
+          className="rounded-full px-8 py-6 text-md font-semibold bg-linear-to-r from-purple-400 to-purple-500 hover:from-purple-400 hover:to-purple-500 active:scale-95"
         >
           Ready to work together?
           <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

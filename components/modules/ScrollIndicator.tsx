@@ -18,7 +18,7 @@ export default function ScrollIndicator() {
       }}
     >
       <motion.span
-        className="text-md tracking-wider text-zinc-400 group-hover:text-sky-400 transition-colors duration-300"
+        className="text-md tracking-wider text-zinc-400 group-hover:text-purple-400 transition-colors duration-300"
         animate={{
           opacity: [1, 0.7, 1],
         }}
@@ -32,14 +32,14 @@ export default function ScrollIndicator() {
       </motion.span>
       <div
         className="
-        h-10 w-6 rounded-full border-2 border-sky-300/60 
+        h-10 w-6 rounded-full border-2 border-purple-300/60 
         flex justify-center overflow-hidden
-        group-hover:border-sky-400/70 group-hover:shadow-md group-hover:shadow-blue-500/50
+        group-hover:border-purple-400/70 group-hover:shadow-md group-hover:shadow-blue-500/50
         transition-all duration-300
       "
       >
         <motion.span
-          className="mt-1 h-2 w-1 rounded-full bg-cyan-300"
+          className="mt-1 h-2 w-1 rounded-full bg-purple-400"
           animate={{
             y: [0, 18],
             opacity: [1, 0],

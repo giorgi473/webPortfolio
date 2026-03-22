@@ -56,8 +56,8 @@ function SkillBadge({ label, accent }: { label: string; accent: string }) {
       className={`font-mono text-sm px-3 py-4 select-none tracking-wide rounded-sm transition-colors duration-200
         ${
           isCyan
-            ? "border-cyan-500/50 text-cyan-300 bg-cyan-950/30 hover:bg-cyan-900/40 hover:border-cyan-400"
-            : "border-emerald-600/50 text-emerald-300 bg-emerald-950/20 hover:bg-emerald-900/30 hover:border-emerald-400"
+            ? "border-purple-500/50 text-purple-400 bg-cyan-950/30 hover:bg-purple-900/40 hover:border-purple-400"
+            : "border-purple-600/50 text-zinc-300 bg-emerald-950/20 hover:bg-emerald-900/30 hover:border-purple-400"
         }`}
     >
       {label}
@@ -69,7 +69,7 @@ function Skills() {
   return (
     <Card className="w-full max-w-5xl bg-zinc-950 rounded-md border">
       <CardHeader className="px-7">
-        <CardTitle className="text-3xl font-extrabold text-cyan-400 tracking-wide">
+        <CardTitle className="text-3xl font-extrabold text-purple-400 tracking-wide">
           Skills
         </CardTitle>
       </CardHeader>
@@ -81,8 +81,8 @@ function Skills() {
                 <CardTitle
                   className={`text-lg font-bold tracking-wide ${
                     category.accent === "cyan"
-                      ? "text-cyan-400"
-                      : "text-cyan-300"
+                      ? "text-purple-400"
+                      : "text-purple-400"
                   }`}
                 >
                   {category.title}

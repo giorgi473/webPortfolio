@@ -159,6 +159,6 @@
   background: whitesmoke;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(#79b0f8);
+  background: linear-gradient(#b35af2);
   z-index: 50px;
 }

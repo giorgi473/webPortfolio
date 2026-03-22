@@ -52,7 +52,7 @@ const ContactSection = () => {
         <p className="text-zinc-400 font-mono text-sm sm:text-lg mb-2">
           {"> Let's connect"}
         </p>
-        <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 text-cyan-400">
+        <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 text-purple-400">
           Get In Touch
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
@@ -64,7 +64,7 @@ const ContactSection = () => {
       <div className="flex flex-col-reverse xl:grid xl:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Form */}
         <div className="w-full z-30">
-          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-cyan-400 text-center">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-purple-400 text-center">
             Send a Message
           </h3>
           <form id="contact-form" onSubmit={form.handleSubmit(onSubmit)}>
@@ -133,7 +133,7 @@ const ContactSection = () => {
               />
               <Button
                 type="submit"
-                className="w-full h-12 sm:h-14 bg-cyan-400 cursor-pointer text-white font-bold rounded-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+                className="w-full h-12 sm:h-14 bg-purple-400 cursor-pointer text-white font-bold rounded-sm flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
               >
                 Send Message <Send size={18} />
               </Button>

@@ -7,21 +7,21 @@ const stats = [
     value: "2+",
     label: "Years Experience",
     iconColor: "text-orange-900/90",
-    valueColor: "text-[#4FD1C5]",
+    valueColor: "text-[#B794F4]",
   },
   {
     icon: Rocket,
     value: "20+",
     label: "Projects Completed",
     iconColor: "text-rose-500",
-    valueColor: "text-[#63B3ED]",
+    valueColor: "text-[#B794F4]",
   },
   {
     icon: Star,
     value: "100%",
     label: "Client Satisfaction",
     iconColor: "text-yellow-400",
-    valueColor: "text-[#48BB78]",
+    valueColor: "text-[#B794F4]",
   },
   {
     icon: BookOpen,
@@ -38,11 +38,11 @@ export function StatsSection() {
       <div className="w-full select-none">
         <div className="text-center space-y-3 flex flex-col items-center mb-10 px-6 sm:px-5">
           <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
-            <span className="text-cyan-400">{">"}</span> Technologies I work
+            <span className="text-purple-400">{">"}</span> Technologies I work
             with
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
-            <span className="text-cyan-400">Stats & Tools</span>
+            <span className="text-purple-400">Stats & Tools</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize text-center max-w-lg">
             A collection of technologies and tools I use to build modern web

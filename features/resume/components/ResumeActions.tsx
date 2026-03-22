@@ -17,8 +17,8 @@ export default function ResumeActions() {
       <Button
         onClick={handleBackToHome}
         className={[
-          "bg-linear-to-r from-sky-400 to-blue-500",
-          "hover:from-sky-300 hover:to-blue-400",
+          "bg-linear-to-r from-purple-400 to-purple-500",
+          "hover:from-purple-300 hover:to-purple-400",
           "text-white font-semibold text-sm tracking-wide",
           "py-6 px-8 rounded-sm capitalize cursor-pointer",
           "border-0 shadow-none",
@@ -40,9 +40,9 @@ export default function ResumeActions() {
         className={[
           "bg-transparent",
           "hover:bg-cyan-400/10",
-          "text-cyan-300 hover:text-cyan-200 font-semibold text-sm tracking-wide",
+          "text-purple-300 hover:text-purple-200 font-semibold text-sm tracking-wide",
           "py-6 px-8 rounded-sm capitalize cursor-pointer",
-          "border border-cyan-500/60 hover:border-cyan-400",
+          "border border-purple-500/60 hover:border-purple-400",
           "shadow-none",
           "transition-all duration-300",
           "flex items-center gap-2",

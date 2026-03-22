@@ -45,7 +45,7 @@ export default function RightSidePanel() {
     <>
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden md:block">
         <motion.div
-          className="flex flex-col overflow-hidden rounded-l-xl border border-r-0 border-zinc-700/50 bg-zinc-900/80 shadow-2xl shadow-black/30 backdrop-blur-sm"
+          className="flex flex-col overflow-hidden rounded-l-sm bg-zinc-900/80 shadow-2xl shadow-black/30"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.1, delay: 0.1 }}
@@ -69,7 +69,7 @@ export default function RightSidePanel() {
                     className="group relative block cursor-pointer"
                     aria-label={button.label}
                   >
-                    <div className="relative w-16 h-16 bg-linear-to-br from-cyan-400 to-cyan-400 hover:from-cyan-400 hover:to-cyan-400 transition-all duration-200 flex items-center justify-center">
+                    <div className="relative w-14 h-14 bg-linear-to-br from-purple-400 to-purple-400 hover:from-purple-400 hover:to-purple-400 transition-all duration-200 flex items-center justify-center">
                       <div className="text-black group-hover:scale-110 transition-transform duration-200">
                         {button.icon}
                       </div>
@@ -79,7 +79,7 @@ export default function RightSidePanel() {
                 <TooltipContent
                   side="left"
                   sideOffset={12}
-                  className="bg-zinc-800 text-white border border-zinc-700"
+                  className="bg-zinc-800 text-white"
                 >
                   {button.label}
                 </TooltipContent>

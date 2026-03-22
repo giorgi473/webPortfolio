@@ -14,18 +14,18 @@ function Hero() {
     >
       <Wrapper className="mx-auto px-6 sm:px-5">
         <div className="relative z-10 flex min-h-screen flex-col justify-evenly">
-          <p className="text-sm font-mono text-sky-300">
+          <p className="text-sm font-mono text-purple-300">
             {"<"} Hi, my name is {"/>"}
           </p>
           <h1 className="leading-none">
-            <span className="block text-[50px] sm:text-[52px] font-extrabold text-sky-300 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
+            <span className="block text-[50px] sm:text-[52px] font-extrabold text-purple-400 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
               GIORGI
             </span>
-            <span className="block text-[50px] sm:text-[52px] font-extrabold text-sky-300 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
+            <span className="block text-[50px] sm:text-[52px] font-extrabold text-purple-400 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
               KAVTARADZE
             </span>
           </h1>
-          <p className="text-4xl font-semibold text-sky-300 md:text-5xl">
+          <p className="text-4xl font-semibold text-purple-400 md:text-5xl">
             Developer
           </p>
           <p className="max-w-2xl text-lg text-slate-200">
@@ -39,14 +39,14 @@ function Hero() {
             <Button
               variant="secondary2"
               size="lg"
-              className="px-10 bg-sky-500 hover:bg-sky-400 text-white"
+              className="px-10 bg-purple-400 hover:bg-purple-400 text-white"
             >
               View Work
             </Button>
             <Button
               variant="primary"
               size="lg"
-              className="px-10 border border-sky-400/60 bg-transparent text-sky-300 hover:bg-sky-500/10"
+              className="px-10 border border-purple-300/60 bg-transparent text-purple-300 hover:bg-sky-500/10"
             >
               Contact Me
             </Button>

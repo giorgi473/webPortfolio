@@ -36,10 +36,10 @@ function ExperienceEntry({
   bullets: string[];
 }) {
   return (
-    <div className="border-l-2 border-cyan-500 pl-5 space-y-3">
+    <div className="border-l-2 border-purple-400 pl-5 space-y-3">
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-white font-bold text-xl leading-tight">{title}</h3>
-        <span className="text-cyan-400 font-mono text-sm whitespace-nowrap mt-1">
+        <span className="text-purple-400 font-mono text-sm whitespace-nowrap mt-1">
           {duration}
         </span>
       </div>
@@ -50,7 +50,7 @@ function ExperienceEntry({
             key={i}
             className="flex items-start gap-2 text-slate-300 text-base"
           >
-            <span className="text-cyan-400 mt-0.75 text-xs select-none">▸</span>
+            <span className="text-purple-400 mt-0.75 text-xs select-none">▸</span>
             <span>{point}</span>
           </li>
         ))}
@@ -62,7 +62,7 @@ function Experience() {
   return (
     <Card className="border border-slate-800 bg-zinc-950 rounded-md">
       <CardHeader className="px-7">
-        <CardTitle className="text-2xl font-bold text-cyan-400">
+        <CardTitle className="text-2xl font-bold text-purple-400">
           Experience
         </CardTitle>
       </CardHeader>
