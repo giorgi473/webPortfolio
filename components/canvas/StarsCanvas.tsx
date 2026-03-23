@@ -10,7 +10,10 @@ const Stars = (props: Record<string, unknown>) => {
   const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(
     () =>
-      random.inSphere(new Float32Array(5000), { radius: 1.2 }) as Float32Array,
+      random.inSphere(
+        new Float32Array(6000),
+        { radius: 1.2 },
+      ) as Float32Array,
   );
 
   useFrame((_state, delta) => {
@@ -21,12 +24,18 @@ const Stars = (props: Record<string, unknown>) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
+      <Points
+        ref={ref}
+        positions={sphere}
+        stride={3}
+        frustumCulled
+        {...props}
+      >
         <PointMaterial
           transparent
           color="#f272c8"
           size={0.002}
-          sizeAttenuation={true}
+          sizeAttenuation
           depthWrite={false}
         />
       </Points>
