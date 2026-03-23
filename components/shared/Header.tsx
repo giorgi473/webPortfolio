@@ -185,6 +185,7 @@ function Header() {
                 <li key={item.id}>
                   <button
                     type="button"
+                    suppressHydrationWarning
                     onClick={() => handleNavClick(item)}
                     className={[
                       "inline-block px-2 pb-0.5 border-b-3 transition-colors cursor-pointer text-sm lg:text-base",
