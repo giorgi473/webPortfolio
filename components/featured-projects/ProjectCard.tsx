@@ -1,20 +1,31 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight, FileText, Sparkles } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, EffectCreative, Keyboard, Mousewheel, Parallax } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-creative";
+import "swiper/css/parallax";
 
 export type Project = {
-  id: number;
+  id: string | number;
+  _id?: string;
   title: string;
   description: string;
   badge?: string;
   image?: string;
+  images?: string[];
   liveUrl?: string;
   codeUrl?: string;
   status?: "active" | "in-progress" | "archived";
+  featured?: boolean;
 };
 
 type ProjectCardProps = {
@@ -29,38 +40,80 @@ const statusConfig = {
 };
 
 export default function ProjectCard({ project, className }: ProjectCardProps) {
+  const [activeSlide, setActiveSlide] = useState(0);
+
   const status =
     (project.status && statusConfig[project.status]) ?? statusConfig["active"];
+
+  const projectImages =
+    project.images && project.images.length > 0
+      ? project.images
+      : [project.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800"];
 
   return (
     <Card
       className={cn(
-        "group flex flex-col overflow-hidden p-0 rounded-sm select-none bg-transparent transition-all duration-200 hover:-translate-y-0.5",
+        "group flex flex-col overflow-hidden p-0 rounded-sm select-none bg-transparent transition-all duration-200 hover:-translate-y-1",
         className,
       )}
     >
-      {/* Image */}
       <div className="relative aspect-video overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-        <Image
-          src={
-            project.image ||
-            "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800"
-          }
-          width={800}
-          height={450}
-          className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-          alt={project.title}
-        />
-
+        <Swiper
+          modules={[Navigation, EffectCreative, Keyboard, Mousewheel, Parallax]}
+          effect="creative"
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: ["-20%", 0, -1],
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          }}
+          speed={800}
+          watchSlidesProgress={true}
+          grabCursor={true}
+          keyboard={{ enabled: true }}
+          mousewheel={{ forceToAxis: true }}
+          navigation={projectImages.length > 1}
+          loop={projectImages.length > 1}
+          onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
+          className="size-full group/swiper"
+          style={{
+            "--swiper-navigation-size": "16px",
+            "--swiper-theme-color": "#a855f7",
+            "--swiper-navigation-color": "#fff",
+          } as React.CSSProperties}
+        >
+          {projectImages.map((img, index) => (
+            <SwiperSlide key={index} className="overflow-hidden">
+              <div className="relative size-full overflow-hidden" data-swiper-parallax="20%">
+                <Image
+                  src={img}
+                  width={800}
+                  height={450}
+                  className={cn(
+                    "size-full object-cover transition-transform duration-1000 ease-out",
+                    "group-hover:scale-105"
+                  )}
+                  alt={`${project.title} - ${index + 1}`}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {projectImages.length > 1 && (
+          <div className="absolute right-3 bottom-3 z-10 rounded-full bg-black/50 backdrop-blur-md px-2.5 py-1 text-[10px] font-medium text-white/90">
+            {activeSlide + 1} / {projectImages.length}
+          </div>
+        )}
         {project.badge && (
-          <span className="absolute left-3 top-3 flex items-center gap-1 rounded-sm px-2.5 py-1 text-[11px] font-medium text-zinc-200 bg-purple-400/40">
+          <span className="absolute left-3 top-3 z-10 flex items-center gap-1 rounded-sm px-2.5 py-1 text-[11px] font-medium text-zinc-200 bg-purple-400/40 backdrop-blur-md">
             <Sparkles className="size-3 text-purple-400" />
             {project.badge}
           </span>
         )}
       </div>
-
-      {/* Content */}
       <CardContent className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex-1 space-y-1.5">
           <h3 className="font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
@@ -70,7 +123,6 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
             {project.description}
           </p>
         </div>
-
         <div className="flex items-center gap-2">
           <Link
             href={project.liveUrl || "#"}
@@ -93,8 +145,6 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
           </Link>
         </div>
       </CardContent>
-
-      {/* Footer */}
       <CardFooter className="border-t rounded-b-sm border-zinc-100 px-4 py-2.5 dark:border-zinc-800">
         <div className="flex items-center gap-2">
           <span className={cn("size-1.5 rounded-full", status.color)} />
