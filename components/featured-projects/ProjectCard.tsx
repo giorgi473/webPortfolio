@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight, FileText, Sparkles } from "lucide-react";
+import { ArrowUpRight, FileText, Sparkles, Star, StarHalf } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectCreative, Keyboard, Mousewheel, Parallax } from "swiper/modules";
@@ -26,6 +26,7 @@ export type Project = {
   codeUrl?: string;
   status?: "active" | "in-progress" | "archived";
   featured?: boolean;
+  rating?: number;
 };
 
 type ProjectCardProps = {
@@ -49,6 +50,28 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
     project.images && project.images.length > 0
       ? project.images
       : [project.image || "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800"];
+
+  const renderStars = (rating: number) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+
+    for (let i = 0; i < 5; i++) {
+      if (i < fullStars) {
+        stars.push(<Star key={i} className="size-3.5 fill-amber-400 text-amber-400" />);
+      } else if (i === fullStars && hasHalfStar) {
+        stars.push(
+          <div key={i} className="relative">
+            <Star className="size-3.5 text-zinc-300 dark:text-zinc-300" />
+            <StarHalf className="absolute inset-0 size-3.5 fill-amber-400 text-amber-400" />
+          </div>
+        );
+      } else {
+        stars.push(<Star key={i} className="size-3.5 text-zinc-300 dark:text-zinc-300" />);
+      }
+    }
+    return stars;
+  };
 
   return (
     <Card
@@ -113,36 +136,47 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
             {project.badge}
           </span>
         )}
+        {project.rating !== undefined && (
+          <div className="absolute right-3 top-3 z-10 flex items-center gap-0.5">
+            {renderStars(project.rating)}
+          </div>
+        )}
       </div>
       <CardContent className="flex flex-1 flex-col gap-3 p-4">
         <div className="flex-1 space-y-1.5">
-          <h3 className="font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-            {project.title}
-          </h3>
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+              {project.title}
+            </h3>
+          </div>
           <p className="line-clamp-2 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
             {project.description}
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Link
-            href={project.liveUrl || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-sm bg-purple-400 px-3.5 py-2 text-xs font-medium text-zinc-200 transition-opacity hover:text-white"
-          >
-            <ArrowUpRight className="size-3.5" />
-            Live demo
-          </Link>
+          {project.liveUrl && (
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-sm bg-purple-400 px-3.5 py-2 text-xs font-medium text-zinc-200 transition-opacity hover:text-white"
+            >
+              <ArrowUpRight className="size-3.5" />
+              Live demo
+            </Link>
+          )}
 
-          <Link
-            href={project.codeUrl || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-sm border border-zinc-200 px-3.5 py-2 text-xs font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
-          >
-            <FileText className="size-3.5" />
-            Source
-          </Link>
+          {project.codeUrl && (
+            <Link
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-zinc-200 px-3.5 py-2 text-xs font-medium text-zinc-600 transition-colors hover:bg-zinc-50 hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-100"
+            >
+              <FileText className="size-3.5" />
+              Source
+            </Link>
+          )}
         </div>
       </CardContent>
       <CardFooter className="border-t rounded-b-sm border-zinc-100 px-4 py-2.5 dark:border-zinc-800">
