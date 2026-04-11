@@ -4,3 +4,7 @@ export interface PanelButton {
     href: string;
     label: string;
 }
+export type Skill = {
+    name: string;
+    icon: React.ReactNode;
+};

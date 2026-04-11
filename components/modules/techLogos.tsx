@@ -47,7 +47,7 @@ export const techLogos = [
   },
   {
     node: <SiNestjs className="text-red-500" />,
-    title: "Tailwind CSS",
+    title: "Nest.js",
     href: "https://nestjs.com",
   },
 ];
