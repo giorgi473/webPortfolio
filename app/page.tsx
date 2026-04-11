@@ -8,11 +8,11 @@ import DottedDivider from "@/components/modules/DottedDivider";
 import ScrollIndicator from "@/components/modules/ScrollIndicator";
 import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
 import { StatsSection } from "@/components/modules/stats-section";
-import SkillsSection from "@/components/modules/SkillsSection";
 import { FeatureGrid } from "@/components/modules/feature-grid";
 import { techLogos } from "@/components/modules/techLogos";
 import ContactSection from "@/components/ContactSection";
 import StarsCanvas from "@/components/canvas/StarsCanvas";
+import DevSkillGrid from "@/components/DevSkillGrid";
 
 function PortfolioPage() {
   return (
@@ -82,7 +82,7 @@ function PortfolioPage() {
             </section>
             <DottedDivider />
             <section id="skills" className="my-20 scroll-mt-28">
-              <SkillsSection />
+              <DevSkillGrid />
             </section>
             <DottedDivider />
             <section className="my-16">
