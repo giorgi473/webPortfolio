@@ -1,54 +1,14 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { motion } from "motion/react";
-import { Contact, Workflow, Home } from "lucide-react";
-import { SiHyperskill } from "react-icons/si";
-import { IoMdStats } from "react-icons/io";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { panelButtons } from "@/constants/panel";
+import { PanelButton } from "@/types/types";
 
 const SCROLL_TARGET_KEY = "scroll-target-section";
 
-interface PanelButton {
-  id: string;
-  icon: React.ReactNode;
-  href: string;
-  label: string;
-}
-
-const panelButtons: PanelButton[] = [
-  {
-    id: "home",
-    icon: <Home className="w-5 h-5" />,
-    href: "/",
-    label: "Home",
-  },
-  {
-    id: "stats",
-    icon: <IoMdStats className="w-5 h-5" />,
-    href: "/",
-    label: "Stats",
-  },
-  {
-    id: "work",
-    icon: <Workflow className="w-5 h-5" />,
-    href: "/",
-    label: "Work",
-  },
-  {
-    id: "skills",
-    icon: <SiHyperskill className="w-5 h-5" />,
-    href: "/",
-    label: "Skills",
-  },
-  {
-    id: "contact",
-    icon: <Contact className="w-5 h-5" />,
-    href: "/",
-    label: "Contact",
-  },
-];
 
 export default function RightSidePanel() {
   const router = useRouter();
@@ -212,7 +172,6 @@ export default function RightSidePanel() {
     </div>
   );
 }
-
 
 
 

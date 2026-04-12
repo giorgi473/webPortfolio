@@ -69,8 +69,8 @@ export default function FeaturedProjects() {
             className={cn(
               "cursor-pointer px-4 py-3 h-auto rounded-full transition-all duration-300 text-sm font-medium",
               ratingFilter === null
-                ? "bg-purple-500 hover:bg-purple-600 text-white shadow-lg shadow-purple-500/20"
-                : "border-zinc-800 text-zinc-400 hover:border-purple-500/50 hover:text-purple-400"
+                ? "bg-purple-500 hover:bg-purple-600 text-white"
+                : "text-zinc-400 hover:border-purple-500/50 hover:text-purple-400"
             )}
           >
             All Projects
@@ -88,8 +88,8 @@ export default function FeaturedProjects() {
               className={cn(
                 "cursor-pointer px-4 py-3 h-auto rounded-full transition-all duration-300 text-sm font-medium",
                 ratingFilter === rating
-                  ? "bg-purple-500 hover:bg-purple-600 text-white shadow-lg shadow-purple-500/20"
-                  : "border-zinc-800 text-zinc-400 hover:border-purple-500/50 hover:text-purple-400"
+                  ? "bg-purple-500 hover:bg-purple-600 text-white"
+                  : "text-zinc-400 hover:border-purple-500/50 hover:text-purple-400"
               )}
             >
               <span className="flex items-center gap-1.5">
