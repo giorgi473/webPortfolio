@@ -59,8 +59,8 @@ function Hero() {
           </Text3DFlip>
           <Text3DFlip
             className="max-w-2xl text-lg text-slate-200"
-            textClassName="text-purple-900"
-            flipTextClassName="text-purple-900"
+            textClassName="text-zinc-300"
+            flipTextClassName="text-zinc-300"
             rotateDirection="top"
             staggerDuration={0.03}
             staggerFrom="first"
