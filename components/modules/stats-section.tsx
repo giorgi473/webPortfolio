@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Briefcase, Rocket, Star } from "lucide-react";
+import Text3DFlip from "@/components/ui/text-3d-flip";
 
 const stats = [
   {
@@ -42,7 +43,17 @@ export function StatsSection() {
             with
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
-            <span className="text-purple-400">Stats & Tools</span>
+            <Text3DFlip
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white"
+              textClassName="text-purple-500"
+              flipTextClassName="text-purple-500"
+              rotateDirection="top"
+              staggerDuration={0.03}
+              staggerFrom="first"
+              transition={{ type: "spring", damping: 25, stiffness: 160 }}
+            >
+              Stats & Tools
+            </Text3DFlip>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize text-center max-w-lg">
             A collection of technologies and tools I use to build modern web

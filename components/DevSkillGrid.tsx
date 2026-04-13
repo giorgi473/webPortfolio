@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { backend, frontend, tools } from "@/constants/skill";
 import { Skill } from "@/types/types";
+import Text3DFlip from "./ui/text-3d-flip";
 
 function SkillCard({ skill }: { skill: Skill }) {
     return (
@@ -26,9 +27,17 @@ export default function DevSkillGrid() {
                 <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
                     <span className="text-purple-400">{">"}</span> Technologies I work with
                 </p>
-                <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold">
-                    <span className="text-purple-400">Skills & Tools</span>
-                </h2>
+                <Text3DFlip
+                    className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white"
+                    textClassName="text-purple-500"
+                    flipTextClassName="text-purple-500"
+                    rotateDirection="top"
+                    staggerDuration={0.03}
+                    staggerFrom="first"
+                    transition={{ type: "spring", damping: 25, stiffness: 160 }}
+                >
+                    Skills & Tools
+                </Text3DFlip>
                 <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize max-w-lg">
                     A collection of technologies and tools I use to build modern web applications
                 </p>

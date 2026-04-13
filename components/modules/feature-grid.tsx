@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Text3DFlip from "@/components/ui/text-3d-flip";
 
 const features = [
   {
@@ -63,12 +64,17 @@ export function FeatureGrid() {
         <code className="text-zinc-400 font-mono text-lg tracking-wider">
           {"> Why work with me?"}
         </code>
-        <h2 className="text-4xl md:text-8xl font-bold tracking-tight text-white">
-          Let's Build{" "}
-          <span className="bg-linear-to-r from-purple-400 via-purple-500 to-purple-400 bg-clip-text text-transparent">
-            Something Amazing
-          </span>
-        </h2>
+        <Text3DFlip
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white"
+          textClassName="text-purple-500"
+          flipTextClassName="text-purple-500"
+          rotateDirection="top"
+          staggerDuration={0.03}
+          staggerFrom="first"
+          transition={{ type: "spring", damping: 25, stiffness: 160 }}
+        >
+          Let's Build Skills & Tools
+        </Text3DFlip>
         <p className="text-muted-foreground text-xl max-w-150">
           Here's what makes me a great addition to your team
         </p>
