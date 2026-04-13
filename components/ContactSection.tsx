@@ -17,6 +17,7 @@ import { InputGroup, InputGroupTextarea } from "@/components/ui/input-group";
 import EarthCanvas from "@/components/canvas/EarthCanvas";
 import { slideIn } from "@/utils/motion";
 import { motion } from "motion/react";
+import Text3DFlip from "./ui/text-3d-flip";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -48,13 +49,21 @@ const ContactSection = () => {
   return (
     <section className="py-10 md:py-16 text-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="text-center mb-10 md:mb-16">
+      <div className="text-center mb-10 md:mb-16 flex flex-col items-center">
         <p className="text-zinc-400 font-mono text-sm sm:text-lg mb-2">
           {"> Let's connect"}
         </p>
-        <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 text-purple-400">
+        <Text3DFlip
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white mb-4"
+          textClassName="text-purple-500"
+          flipTextClassName="text-purple-500"
+          rotateDirection="top"
+          staggerDuration={0.03}
+          staggerFrom="first"
+          transition={{ type: "spring", damping: 25, stiffness: 160 }}
+        >
           Get In Touch
-        </h2>
+        </Text3DFlip>
         <p className="text-gray-400 max-w-2xl mx-auto text-sm sm:text-base">
           Have a project in mind? Want to collaborate? Or just say hello?
         </p>

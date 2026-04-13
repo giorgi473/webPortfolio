@@ -5,6 +5,7 @@ import ProjectCard, { type Project } from "@/components/featured-projects/Projec
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import Text3DFlip from "../ui/text-3d-flip";
 
 export default function FeaturedProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -47,13 +48,21 @@ export default function FeaturedProjects() {
 
   return (
     <section className="w-full py-12 sm:py-16 overflow-x-hidden">
-      <div className="max-w-3xl mx-auto text-center space-y-3 px-6 sm:px-5">
+      <div className="text-center space-y-3 flex flex-col items-center mb-10 px-6 sm:px-5">
         <p className="text-base sm:text-lg md:text-xl font-medium text-zinc-400 tracking-[0.2em] capitalize">
           <span className="text-purple-400">{">"}</span> My recent projects
         </p>
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white">
-          <span className="text-purple-400">Featured Work</span>
-        </h2>
+        <Text3DFlip
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold text-white"
+          textClassName="text-purple-500"
+          flipTextClassName="text-purple-500"
+          rotateDirection="top"
+          staggerDuration={0.03}
+          staggerFrom="first"
+          transition={{ type: "spring", damping: 25, stiffness: 160 }}
+        >
+          Featured Work
+        </Text3DFlip>
         <p className="text-sm sm:text-base md:text-lg text-gray-400 capitalize">
           A showcase of my recent projects and contributions
         </p>

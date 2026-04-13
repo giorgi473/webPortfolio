@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Text3DFlip from "@/components/ui/text-3d-flip";
 import Wrapper from "@/components/shared/Wrapper";
 
 function Hero() {
@@ -18,23 +19,59 @@ function Hero() {
             {"<"} Hi, my name is {"/>"}
           </p>
           <h1 className="leading-none">
-            <span className="block text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
-              GIORGI
+            <span>
+              <Text3DFlip
+                className="font-serif text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
+                textClassName="text-purple-900"
+                flipTextClassName="text-purple-900"
+                rotateDirection="top"
+                staggerDuration={0.03}
+                staggerFrom="first"
+                transition={{ type: "spring", damping: 25, stiffness: 160 }}
+              >
+                GIORGI
+              </Text3DFlip>
             </span>
-            <span className="block text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]">
-              KAVTARADZE
+            <span>
+              <Text3DFlip
+                className="font-serif text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
+                textClassName="text-purple-900"
+                flipTextClassName="text-purple-900"
+                rotateDirection="top"
+                staggerDuration={0.03}
+                staggerFrom="first"
+                transition={{ type: "spring", damping: 25, stiffness: 160 }}
+              >
+                KAVTARADZE
+              </Text3DFlip>
             </span>
           </h1>
-          <p className="text-4xl font-semibold text-purple-900 md:text-5xl">
+          <Text3DFlip
+            className="text-4xl font-semibold text-purple-900 md:text-5xl"
+            textClassName="text-purple-900"
+            flipTextClassName="text-purple-900"
+            rotateDirection="top"
+            staggerDuration={0.03}
+            staggerFrom="first"
+            transition={{ type: "spring", damping: 25, stiffness: 160 }}
+          >
             Developer
-          </p>
-          <p className="max-w-2xl text-lg text-slate-200">
+          </Text3DFlip>
+          <Text3DFlip
+            className="max-w-2xl text-lg text-slate-200"
+            textClassName="text-purple-900"
+            flipTextClassName="text-purple-900"
+            rotateDirection="top"
+            staggerDuration={0.03}
+            staggerFrom="first"
+            transition={{ type: "spring", damping: 25, stiffness: 160 }}
+          >
             Developer specializing in Next.js, React, and TypeScript. I build
             clean, fast, and modern web apps with a focus on smooth user
             experiences. Currently working on large-scale projects with a team,
             solving real problems and learning every day. Exploring backend
             development to become a well-rounded developer.
-          </p>
+          </Text3DFlip>
           <div className="flex gap-6">
             <Button
               variant="secondary2"
