@@ -7,6 +7,7 @@ import Experience from "@/features/resume/components/Experience";
 import Skills from "@/features/resume/components/Skills";
 import Languages from "@/features/resume/components/Languages";
 import Connect from "@/features/resume/components/Connect";
+import Text3DFlip from "@/components/ui/text-3d-flip";
 
 export default function ResumeHero() {
   return (
@@ -18,11 +19,19 @@ export default function ResumeHero() {
             {"resume"}
           </p>
         </div>
-        <header className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[0.15em] text-purple-400 uppercase">
+        <header className="text-center mb-10 flex flex-col items-center">
+          <Text3DFlip
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[0.15em] text-purple-400 uppercase"
+            textClassName="text-purple-800"
+            flipTextClassName="text-purple-800"
+            rotateDirection="top"
+            staggerDuration={0.03}
+            staggerFrom="first"
+            transition={{ type: "spring", damping: 25, stiffness: 160 }}
+          >
             GIORGI KAVTARADZE
-          </h1>
-          <p className="mt-4 text-lg sm:text-2xl font-bold text-purple-400">
+          </Text3DFlip>
+          <p className="mt-4 text-lg sm:text-2xl font-bold text-purple-500">
             Developer (Next.js &amp; API Integration)
           </p>
           <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-300 select-none">
