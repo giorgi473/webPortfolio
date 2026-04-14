@@ -15,13 +15,21 @@ function Hero() {
     >
       <Wrapper className="mx-auto px-6 sm:px-5">
         <div className="relative z-10 flex min-h-screen flex-col justify-evenly">
-          <p className="text-sm font-mono text-zinc-300">
+          <Text3DFlip
+            className="max-w-2xl text-md font-mono text-slate-200"
+            textClassName="text-zinc-300"
+            flipTextClassName="text-zinc-300"
+            rotateDirection="top"
+            staggerDuration={0.03}
+            staggerFrom="first"
+            transition={{ type: "spring", damping: 25, stiffness: 160 }}
+          >
             {"<"} Hi, my name is {"/>"}
-          </p>
-          <h1 className="leading-none">
+          </Text3DFlip>
+          <div className="leading-none">
             <span>
               <Text3DFlip
-                className="font-serif text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
+                className="font-serif max-w-xl text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
                 textClassName="text-purple-900"
                 flipTextClassName="text-purple-900"
                 rotateDirection="top"
@@ -34,7 +42,7 @@ function Hero() {
             </span>
             <span>
               <Text3DFlip
-                className="font-serif text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
+                className="font-serif max-w-2xl text-[50px] sm:text-[52px] font-extrabold text-purple-900 md:text-[66px] lg:text-[86px] 2xl:text-[112px]"
                 textClassName="text-purple-900"
                 flipTextClassName="text-purple-900"
                 rotateDirection="top"
@@ -45,9 +53,9 @@ function Hero() {
                 KAVTARADZE
               </Text3DFlip>
             </span>
-          </h1>
+          </div>
           <Text3DFlip
-            className="text-4xl font-semibold text-purple-900 md:text-5xl"
+            className="text-4xl max-w-sm font-semibold text-purple-900 md:text-5xl"
             textClassName="text-purple-900"
             flipTextClassName="text-purple-900"
             rotateDirection="top"
